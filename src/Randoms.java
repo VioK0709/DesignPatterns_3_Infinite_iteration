@@ -19,16 +19,14 @@ public class Randoms implements Iterable<Integer> {
 
             @Override
             public boolean hasNext() {
-                if (index < max) {
-                    return true;
-                }
-                return false;
+                return index < max;
             }
 
             @Override
             public Integer next() {
                 int diff = max - min;
                 if (index < max && diff >= 0 && diff != Integer.MAX_VALUE) {
+                    index++;
                     return random.nextInt(diff + 1) + min;
                 }
                 return null;
