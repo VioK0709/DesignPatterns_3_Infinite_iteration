@@ -19,7 +19,7 @@ public class Randoms implements Iterable<Integer> {
 
             @Override
             public boolean hasNext() {
-                return index < max;
+                return true;
             }
 
             @Override
